@@ -52,6 +52,17 @@ const Item = styled.li<{isActive:boolean}>`
     font-size: 17px;
   }
 `;
+const Review = styled.div`
+padding: 18px 30px;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 17px;
+`;
 
 const navVariants = {
     up: {
@@ -90,7 +101,6 @@ export function Header() {
     const tvMatch = useMatch("/tvs")
     const homeMatch = useMatch("/")
     const searchMatch = useMatch(`/search/:types`)
-    const reviewMatch = useMatch("/review")
     const searchKeywordMatch = useMatch(`/search/:types/:keyword`)
     const movieIdMatch = useMatch(`/movies/:types/:movieId`)
     const tvIdMatch = useMatch(`/tvs/:types/:movieId`)
@@ -137,9 +147,9 @@ export function Header() {
                     <Item isActive={tvMatch !== null || tvIdMatch !== null }>
                       <Link to={'/tvs'}>TV</Link>
                     </Item>
-                    <Item isActive={reviewMatch !== null}>
-                      <Link to={'/review'}>리뷰</Link>
-                    </Item>
+                    <Review>
+                      < a href="https://kojaehoon.github.io/NewBoard/"> 리뷰 </a>
+                    </Review>
               </Col>
               <Col>
                 <Items>

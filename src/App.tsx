@@ -3,7 +3,6 @@ import { Header } from './Components/Home/Header';
 import { Home } from './Routes/Home';
 import  Search  from './Routes/Search';
 import { Tv } from './Routes/Tv';
-import  Review  from './Routes/Review';
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
               <Route path=":keyword" element={<Search/>}/>
           </Route>
           </Route>
-          <Route path="/review" element={<Review/>}></Route>
       </Routes>
     </BrowserRouter>
   );
